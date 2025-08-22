@@ -1,0 +1,194 @@
+/* assets/css/style.css */
+:root {
+    --grad1: #9b5cff;
+    --grad2: #8a7dff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: radial-gradient(1200px 800px at 10% -10%, rgba(155, 92, 255, .08), transparent),
+                            radial-gradient(1200px 800px at 90% 10%, rgba(138, 125, 255, .08), transparent);
+}
+
+.text-gradient {
+    background: linear-gradient(90deg, var(--grad1), var(--grad2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.glass-blur {
+    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, .6);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .05);
+}
+
+.section-hero {
+    padding: 140px 0 110px;
+    position: relative;
+    overflow: hidden;
+}
+
+.section-hero .shape {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 28px;
+    background: linear-gradient(135deg, #f0e7ff, #efe9ff);
+    box-shadow: 0 20px 50px rgba(155, 92, 255, .15);
+    animation: float 10s ease-in-out infinite;
+    filter: drop-shadow(0 5px 20px rgba(0, 0, 0, .1));
+}
+
+.section-hero .s1 {
+    left: 3%;
+    top: 25%;
+}
+
+.section-hero .s2 {
+    right: 8%;
+    top: 20%;
+    animation-delay: -2s;
+}
+
+.section-hero .s3 {
+    left: 8%;
+    bottom: 8%;
+    animation-delay: -4s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(6deg);
+    }
+}
+
+.icon-btn {
+    display: inline-flex;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: #f2f2ff;
+    color: #5b47ff;
+    transition: all .2s;
+}
+
+.icon-btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+}
+
+.stat {
+    padding: 18px;
+    border-radius: 18px;
+    background: #ffffff;
+}
+
+.shadow-2xl {
+    box-shadow: 0 40px 80px rgba(0, 0, 0, .12);
+}
+
+.lift {
+    transform: translateY(0);
+    transition: transform .2s;
+}
+
+.lift:hover {
+    transform: translateY(-2px);
+}
+
+.skill-card .progress {
+    height: 10px;
+    border-radius: 999px;
+    background: #eef0ff;
+}
+
+.skill-card .progress-bar {
+    background: linear-gradient(90deg, var(--grad1), var(--grad2));
+}
+
+.project-card .project-thumb {
+    height: 160px;
+    border-radius: 16px 16px 0 0;
+    background: linear-gradient(135deg, #ece8ff, #f2f0ff);
+}
+
+.info-tile {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 12px 16px;
+    border-radius: 14px;
+    background: #f6f6ff;
+}
+
+footer .icon-btn {
+    background: rgba(255, 255, 255, .08);
+    color: #fff;
+}
+
+footer .icon-btn:hover {
+    background: rgba(255, 255, 255, .2);
+}
+
+
+
+
+
+
+
+
+
+.project-card {
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.card-title {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.card-body .btn {
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+
+.fixed-skills {
+    position: relative;         /* keeps it in place */
+    top: 60px;               /* adjust for navbar height */
+    left: 0;
+    width: 100%;
+    height: calc(70vh - 80px); /* fills the screen minus navbar */
+    overflow-y: auto;        /* lets the skills section scroll if content is long */
+    background: #fff;        /* white background so content behind doesn’t overlap */
+    z-index: 10; 
+    margin-bottom: 5px;            /* stays above other content */
+}
+
